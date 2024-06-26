@@ -1,9 +1,9 @@
 import '../styles/section.css'
 import JsxElemente from '../interfaces/Jsx.interface'
-function Sections({children}:JsxElemente){
+const Sections:  React.FC<JsxElemente> = ({children, bgColor} )=>{
     return(
         <>
-        <section>
+        <section className={bgColor}>
             {children}
         </section>
         </>

@@ -1,4 +1,4 @@
-import '../styles/header.css'
+import "../styles/header.css";
 import Scissors from "../icons/Scissors";
 export default function Header() {
   return (
