@@ -4,3 +4,99 @@
   padding: 2rem;
   text-align: center;
 }
+main {
+  margin: auto;
+  padding: 1rem;
+  max-width: calc(100% - 2rem);
+  color: black;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.butones {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+  gap: 20px;
+  padding: 12rem 0;
+}
+p {
+  color: #6b7280;
+  font-size: 20px;
+  margin: 8px 0 0;
+  font-weight: 200;
+  text-wrap: wrap;
+}
+img {
+  width: 300px;
+  height: 200px;
+  border: solid 1px #ccc;
+  border-radius: 5%;
+  transition: transform 0.3s ease-in-out;
+}
+.aside-about {
+  width: 40%;
+}
+
+.galery {
+  display: grid;
+  text-align: center;
+  grid-template-columns: auto, 1fr;
+  grid-template-rows: auto, auto;
+  gap: 15px;
+}
+.top-img {
+  grid-row: 1; /* Occupies the first row */
+  grid-column: span 2; /* Spans across both columns */
+  height: 400px; /* Adjust height as needed */
+  width: 600px;
+  object-fit: cover; /* Ensure image covers the entire area */
+}
+h1 {
+  font-size: 60px;
+  font-weight: 200;
+  margin: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 8px 0 0;
+  color: #09090b;
+}
+.header small {
+  text-align: end;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.header p {
+  color: #6b7280;
+  font-weight: 300;
+  font-size: 16px;
+  text-wrap: wrap;
+  margin: 8px 0 0;
+}
+.body-seccion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 800px;
+  padding: 48px 0;
+}
+.imagen-corte img {
+  width: 500px;
+  height: 500px;
+}
