@@ -1,20 +1,28 @@
+/*
+ *  App.js
+ */
+//import Styles css
 import "./App.css";
+// import Components
+
 import Sections from "./components/Sections";
 import Boton from "./components/Boton";
 import Services from "./components/Servises";
 import Modal from "./components/Modal";
+
+//import of React 
 import { useState } from "react";
 
 function App() {
-  const [isTrue, setIstrue] = useState(true)
+  const [isTrue, setIstrue] = useState(true);
 
- const changeTrue = ()=>{
-  setIstrue(!isTrue)
- }
+  const changeTrue = () => {
+    setIstrue(!isTrue);
+  };
   return (
     <>
       <main>
-        {isTrue ? <Modal/>: " "}
+        {isTrue ? <Modal onClick={changeTrue} /> : " "}
         <Sections>
           <aside className="hero">
             <div>
@@ -30,7 +38,11 @@ function App() {
                 <Boton name="Book" className={"buton"} onClick={changeTrue}>
                   Book now
                 </Boton>
-                <Boton name="servise" className={"buton-white"}  onClick={changeTrue}>
+                <Boton
+                  name="servise"
+                  className={"buton-white"}
+                  onClick={changeTrue}
+                >
                   Servises
                 </Boton>
               </div>
@@ -78,7 +90,7 @@ function App() {
               services in a luxurious and welcoming environment.
             </p>
             <div className="butones">
-              <Boton name="Book" className={"buton"} >
+              <Boton name="Book" className={"buton"}>
                 Book an appointment
               </Boton>
               <Boton name="servise" className={"buton-white"}>
@@ -95,11 +107,11 @@ function App() {
         <Sections>
           <aside>
             <div className="header">
-            <h2>Schedule Your Appointment Today</h2>
-            <p>
-              Our team is here to assist you and answer any questions you may
-              have. Get in touch to book your next appointment.
-            </p>
+              <h2>Schedule Your Appointment Today</h2>
+              <p>
+                Our team is here to assist you and answer any questions you may
+                have. Get in touch to book your next appointment.
+              </p>
             </div>
           </aside>
         </Sections>
