@@ -26,7 +26,7 @@ export default function Services() {
   return (
     <>
       <aside>
-        <div className='body-details'>
+        <div>
           {services.map((services, index) => (
             <div className='section' key={index}>
               <h3>{services.name}</h3>

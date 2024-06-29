@@ -38,7 +38,7 @@ function App() {
             <img src="/img/beauty-salon-pink.webp" alt="Salon pink" />
           </aside>
         </Sections>
-        <Sections bgColor='bg-color-gray'>
+        <Sections bgColor="bg-color-gray">
           <aside>
             <div className="header">
               <h2>Indulge in Luxury</h2>
@@ -47,16 +47,51 @@ function App() {
                 help you look and feel your best.
               </p>
             </div>
-            <div className='body-seccion'>
-              <div className='services-details'>
+            <div className="body-seccion">
+              <div className="services-details">
                 <Services />
               </div>
-              <div className='imagen-corte'>
+              <div className="imagen-corte">
                 <img
                   src="/img/salon-corte.webp"
                   alt="salonera haciendo corte"
                 />
               </div>
+            </div>
+          </aside>
+        </Sections>
+        <Sections>
+          <aside className="aside-about">
+            <h2>Elevating Beauty, Empowering Confidence</h2>
+            <p>
+              At Bella Beauty Salon, we are passionate about helping our clients
+              look and feel their absolute best. Our team of skilled
+              professionals is dedicated to providing personalized, high-quality
+              services in a luxurious and welcoming environment.
+            </p>
+            <div className="butones">
+              <Boton name="Book" className={"buton"}>
+                Book an appointment
+              </Boton>
+              <Boton name="servise" className={"buton-white"}>
+                Learn more
+              </Boton>
+            </div>
+          </aside>
+          <aside>
+            <div className="imagen-corte">
+              <img src="/img/salon-corte.webp" alt="salonera haciendo corte" />
+            </div>
+          </aside>
+        </Sections>
+        <Sections>
+          <aside>
+            <div className="header">
+            <h2>Schedule Your Appointment Today</h2>
+            <p>
+              Our team is here to assist you and answer any questions you may
+              have. Get in touch to book your next appointment.
+            </p>
             </div>
           </aside>
         </Sections>
