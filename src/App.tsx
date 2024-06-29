@@ -2,11 +2,19 @@ import "./App.css";
 import Sections from "./components/Sections";
 import Boton from "./components/Boton";
 import Services from "./components/Servises";
+import Modal from "./components/Modal";
+import { useState } from "react";
 
 function App() {
+  const [isTrue, setIstrue] = useState(true)
+
+ const changeTrue = ()=>{
+  setIstrue(!isTrue)
+ }
   return (
     <>
       <main>
+        {isTrue ? <Modal/>: " "}
         <Sections>
           <aside className="hero">
             <div>
@@ -19,10 +27,10 @@ function App() {
                 </p>
               </div>
               <div className="butones">
-                <Boton name="Book" className={"buton"}>
+                <Boton name="Book" className={"buton"} onClick={changeTrue}>
                   Book now
                 </Boton>
-                <Boton name="servise" className={"buton-white"}>
+                <Boton name="servise" className={"buton-white"}  onClick={changeTrue}>
                   Servises
                 </Boton>
               </div>
@@ -70,7 +78,7 @@ function App() {
               services in a luxurious and welcoming environment.
             </p>
             <div className="butones">
-              <Boton name="Book" className={"buton"}>
+              <Boton name="Book" className={"buton"} >
                 Book an appointment
               </Boton>
               <Boton name="servise" className={"buton-white"}>

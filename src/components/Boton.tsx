@@ -1,14 +1,16 @@
 import  '../styles/style-react.css';
-type BotonPros = {
+type BotonProps = {
   children: string,
   name: string,
   className: string
   onClick?: ()=> void
 }
 
-export default function Boton({ children, name, className }:BotonPros ) {
+export default function Boton({ children, name, className, onClick }:BotonProps ) {
   const handelClick = () => {
-    alert(" hello World" + name);
+    if(name === "Book"){
+      onClick?.()
+    }
   };
   return (
     <>
