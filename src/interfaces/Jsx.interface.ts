@@ -1,4 +1,8 @@
-export default interface JsxElemente{
-    children: JSX.Element[] | JSX.Element,
+import { ReactNode } from "react"
+
+ type JsxElemente ={
+    children: ReactNode,
     bgColor?: string
+    
 }
+export default JsxElemente

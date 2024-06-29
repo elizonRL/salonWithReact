@@ -1,6 +1,12 @@
 import  '../styles/style-react.css';
+type BotonPros = {
+  children: string,
+  name: string,
+  className: string
+  onClick?: ()=> void
+}
 
-export default function Boton({ children, name, className }:{children: string, name: string, className: string } ) {
+export default function Boton({ children, name, className }:BotonPros ) {
   const handelClick = () => {
     alert(" hello World" + name);
   };
