@@ -14,7 +14,7 @@ header {
     gap: 20px;
     
   }
-  a{
+  nav ul li a{
     text-decoration: none;
     color: #000;
     font-weight: 500;

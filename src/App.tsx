@@ -14,15 +14,18 @@ import Modal from "./components/Modal";
 import { useState } from "react";
 
 function App() {
-  const [isTrue, setIstrue] = useState(true);
+  const [isTrue, setIstrue] = useState(false);
 
-  const changeTrue = () => {
-    setIstrue(!isTrue);
+  const openModal = () => {
+    setIstrue(true)
   };
+  const closeModal = ()=>{
+    setIstrue(false);
+  }
   return (
     <>
       <main>
-        {isTrue ? <Modal onClick={changeTrue} /> : " "}
+        {isTrue && <Modal onClick={closeModal} /> }
         <Sections>
           <aside className="hero">
             <div>
@@ -35,13 +38,13 @@ function App() {
                 </p>
               </div>
               <div className="butones">
-                <Boton name="Book" className={"buton"} onClick={changeTrue}>
+                <Boton name="Book" className={"buton"} onClick={openModal}>
                   Book now
                 </Boton>
                 <Boton
                   name="servise"
                   className={"buton-white"}
-                  onClick={changeTrue}
+                  onClick={openModal}
                 >
                   Servises
                 </Boton>
@@ -90,7 +93,7 @@ function App() {
               services in a luxurious and welcoming environment.
             </p>
             <div className="butones">
-              <Boton name="Book" className={"buton"}>
+              <Boton name="Book" className={"buton"} onClick={openModal}>
                 Book an appointment
               </Boton>
               <Boton name="servise" className={"buton-white"}>
