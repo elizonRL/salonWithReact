@@ -10,22 +10,27 @@ import Boton from "./components/Boton";
 import Services from "./components/Servises";
 import Modal from "./components/Modal";
 
-//import of React 
+//import of React
 import { useState } from "react";
+import Formulario from "./components/Formulario";
+
 
 function App() {
   const [isTrue, setIstrue] = useState(false);
 
   const openModal = () => {
-    setIstrue(true)
+    setIstrue(true);
   };
-  const closeModal = ()=>{
+  const closeModal = () => {
     setIstrue(false);
+  };
+  const modalServise =()=>{
+    
   }
   return (
     <>
       <main>
-        {isTrue && <Modal onClick={closeModal} /> }
+        {isTrue && <Modal onClick={closeModal} />}
         <Sections>
           <aside className="hero">
             <div>
@@ -38,14 +43,10 @@ function App() {
                 </p>
               </div>
               <div className="butones">
-                <Boton name="Book" className={"buton"} onClick={openModal}>
+                <Boton className={"buton"} onClick={openModal}>
                   Book now
                 </Boton>
-                <Boton
-                  name="servise"
-                  className={"buton-white"}
-                  onClick={openModal}
-                >
+                <Boton className={"buton-white"} onClick={modalServise}>
                   Servises
                 </Boton>
               </div>
@@ -93,12 +94,10 @@ function App() {
               services in a luxurious and welcoming environment.
             </p>
             <div className="butones">
-              <Boton name="Book" className={"buton"} onClick={openModal}>
+              <Boton className={"buton"} onClick={openModal}>
                 Book an appointment
               </Boton>
-              <Boton name="servise" className={"buton-white"}>
-                Learn more
-              </Boton>
+              <Boton className={"buton-white"}>Learn more</Boton>
             </div>
           </aside>
           <aside>
@@ -115,6 +114,9 @@ function App() {
                 Our team is here to assist you and answer any questions you may
                 have. Get in touch to book your next appointment.
               </p>
+            </div>
+            <div>
+              <Formulario />
             </div>
           </aside>
         </Sections>

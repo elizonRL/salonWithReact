@@ -1,10 +1,11 @@
-import { MouseEvent } from "react";
+import { MouseEvent, ReactNode } from "react";
 import "../styles/modal.css";
-import Formulario from "./Formulario";
+/* import Formulario from "./Formulario"; */
 type Props = {
+  children?:ReactNode
   onClick: () => void;
 };
-export default function Modal({onClick}:Props) {
+export default function Modal({onClick, children}:Props) {
   function handelModal(e: MouseEvent) {
     if(e.target === e.currentTarget){
       onClick();
@@ -20,7 +21,7 @@ export default function Modal({onClick}:Props) {
             <p></p>
           </div>
           <div>
-            <Formulario/>
+            {children}
           </div>
         </div>
       </div>
