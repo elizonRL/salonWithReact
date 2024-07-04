@@ -14,23 +14,33 @@ import Modal from "./components/Modal";
 import { useState } from "react";
 import Formulario from "./components/Formulario";
 
-
 function App() {
   const [isTrue, setIstrue] = useState(false);
-
+  const [modalServise, SetModalServise] = useState(false);
+  
   const openModal = () => {
     setIstrue(true);
+    SetModalServise(false);
   };
   const closeModal = () => {
     setIstrue(false);
   };
-  const modalServise =()=>{
-    
+
+  function modalServiseF() {
+    setIstrue(true);
+    SetModalServise(true);
   }
+  let consten;
+  if (modalServise) {
+    consten = <Services />;
+  } else {
+    consten = <Formulario />;
+  }
+
   return (
     <>
       <main>
-        {isTrue && <Modal onClick={closeModal} />}
+        {isTrue && <Modal onClick={closeModal}>{consten}</Modal>}
         <Sections>
           <aside className="hero">
             <div>
@@ -46,7 +56,7 @@ function App() {
                 <Boton className={"buton"} onClick={openModal}>
                   Book now
                 </Boton>
-                <Boton className={"buton-white"} onClick={modalServise}>
+                <Boton className={"buton-white"} onClick={modalServiseF}>
                   Servises
                 </Boton>
               </div>
