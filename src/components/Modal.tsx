@@ -16,11 +16,10 @@ export default function Modal({onClick, children}:Props) {
       <div className="modal" onClick={handelModal}>
         <div className="modal-content">
           <samp className="close" onClick={handelModal}>&times;</samp>
-          <div>
+          <div className="header-modal">
             <h3>Book Your services</h3>
-            <p></p>
           </div>
-          <div>
+          <div className="modal-body">
             {children}
           </div>
         </div>
