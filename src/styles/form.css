@@ -24,3 +24,11 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.invalid-feedback{
+  color: rgb(245, 99, 99);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 10px;
+  text-wrap: wrap;
+  border: solid 1 black;
+}

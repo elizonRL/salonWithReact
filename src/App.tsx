@@ -13,6 +13,7 @@ import Modal from "./components/Modal";
 //import of React
 import { useState } from "react";
 import Formulario from "./components/Formulario";
+import { ToastContainer } from "react-toastify";
 
 type Data = {
   name: string;
@@ -23,6 +24,7 @@ type Data = {
 };
 
 function App() {
+  const [appointments, setAppointments] = useState<object[]>([]);
   const [isTrue, setIstrue] = useState(false);
   const [modalServise, SetModalServise] = useState(false);
 
@@ -39,7 +41,8 @@ function App() {
     SetModalServise(true);
   }
   const dataForm = (data: Data) => {
-    console.log(data.name);
+    setAppointments((prevState) => [...prevState, data]);
+    console.log(appointments)
   };
   let conten;
   if (modalServise) {
@@ -51,6 +54,7 @@ function App() {
   return (
     <>
       <main>
+      <ToastContainer/>
         {isTrue && <Modal onClick={closeModal}>{conten}</Modal>}
         <Sections>
           <aside className="hero">
